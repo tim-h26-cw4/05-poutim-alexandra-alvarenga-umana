@@ -5,6 +5,7 @@ export default class Poutine {
     this.element = element;
     this.types = this.element.querySelectorAll('.js-btnPoutine');
     this.selectedType = '';
+    // this.isActive = true;
     this.init();
   }
 
@@ -16,15 +17,19 @@ export default class Poutine {
     }
   }
 
-  selectType() {
+  selectType(event) {
     for (let i = 0; i < this.types.length; i++) {
       const typePoutine = this.types[i];
       typePoutine.classList.remove('is-active');
-      typePoutine.classList.add('is-active');
-      this.selectType.innerText = this.types;
-      //   console.log(typePoutine);
+      // if (condition) {
+      // }
+      console.log(typePoutine);
     }
-    // if (condition) {
-    // }
+    event.currentTarget.classList.add('is-active');
+    // this.typePoutine.classList.add('is-active');
+    this.selectType.innerText = this.types;
+    this.updatePhoto();
   }
+
+  updatePhoto() {}
 }
