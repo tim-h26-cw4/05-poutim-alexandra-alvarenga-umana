@@ -31,5 +31,10 @@ export default class Poutine {
     this.updatePhoto();
   }
 
-  updatePhoto() {}
+  updatePhoto() {
+    const imgPoutine = this.element.querySelectorAll('img');
+    imgPoutine.classList.add('is-active');
+    // img.src = `assets/images/ex1/${this.selectedType}.png`;
+    console.log(imgPoutine);
+  }
 }
