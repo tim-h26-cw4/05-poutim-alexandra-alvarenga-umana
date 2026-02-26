@@ -15,10 +15,12 @@ export default class Chef {
       const poutine = poutines[i];
       const instance = new Poutine(poutine);
       this.menu.push(instance);
-      console.log(this.menu);
+      //   console.log(this.menu);
     }
-    // const btnCommande = this.element.querySelectorAll('.js-btnCommande');
-    // btnCommande.addEventListener('click', this.SendOrder.bind(this));
-    // console.log(btnCommande);
+    const btnCommande = this.element.querySelectorAll('.js-btnCommande');
+    btnCommande.addEventListener('click', this.sendOrder.bind(this));
+    console.log(btnCommande);
   }
+
+  sendOrder() {}
 }

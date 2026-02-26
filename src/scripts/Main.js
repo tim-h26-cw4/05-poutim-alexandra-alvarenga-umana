@@ -10,11 +10,13 @@ class Main {
   }
 
   init() {
-    const chefs = document.querySelector('[data-component="Chefs"]');
+    const chefs = document.querySelectorAll('[data-component="Chefs"]');
+    // console.log(chefs);
+
     for (let i = 0; i < chefs.length; i++) {
       const chef = chefs[i];
       new Chef(chef);
-      console.log(chef);
+      //   console.log(chefs);
     }
   }
 }
