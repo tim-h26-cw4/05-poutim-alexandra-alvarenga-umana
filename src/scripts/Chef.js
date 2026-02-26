@@ -1,11 +1,10 @@
 import Poutine from './Poutine.js';
 
 export default class Chef {
-  constructor() {
+  constructor(element) {
     this.element = element;
     this.menu = [];
     this.container = '';
-    console.log('Test');
 
     this.init();
   }
@@ -18,5 +17,8 @@ export default class Chef {
       this.menu.push(instance);
       console.log(this.menu);
     }
+    // const btnCommande = this.element.querySelectorAll('.js-btnCommande');
+    // btnCommande.addEventListener('click', this.SendOrder.bind(this));
+    // console.log(btnCommande);
   }
 }

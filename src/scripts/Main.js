@@ -6,16 +6,15 @@ Icons.load();
 
 class Main {
   constructor() {
-    console.log('Test');
-
     this.init();
   }
 
   init() {
-    const chefs = document.querySelectorAll('[data-component-chefs]');
+    const chefs = document.querySelector('[data-component="Chefs"]');
     for (let i = 0; i < chefs.length; i++) {
       const chef = chefs[i];
-      new Chef();
+      new Chef(chef);
+      console.log(chef);
     }
   }
 }
