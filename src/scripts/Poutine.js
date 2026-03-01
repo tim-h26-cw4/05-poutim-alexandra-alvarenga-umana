@@ -1,11 +1,9 @@
 export default class Poutine {
   constructor(element) {
-    // console.log('testetstst');
-
     this.element = element;
     this.types = this.element.querySelectorAll('.js-btnPoutine');
     this.selectedType = '';
-    // this.isActive = true;
+
     this.init();
   }
 
@@ -13,7 +11,6 @@ export default class Poutine {
     for (let i = 0; i < this.types.length; i++) {
       const type = this.types[i];
       type.addEventListener('click', this.selectType.bind(this));
-      //   console.log(type);
     }
   }
 
@@ -21,20 +18,23 @@ export default class Poutine {
     for (let i = 0; i < this.types.length; i++) {
       const typePoutine = this.types[i];
       typePoutine.classList.remove('is-active');
-      // if (condition) {
-      // }
+
       console.log(typePoutine);
     }
     event.currentTarget.classList.add('is-active');
-    // this.typePoutine.classList.add('is-active');
-    this.selectType.innerText = this.types;
+
+    this.selectedType = event.currentTarget.innerText;
     this.updatePhoto();
   }
 
   updatePhoto() {
-    const imgPoutine = this.element.querySelectorAll('img');
-    imgPoutine.classList.add('is-active');
-    // img.src = `assets/images/ex1/${this.selectedType}.png`;
-    console.log(imgPoutine);
+    const imgPoutines = this.element.querySelectorAll('img');
+
+    for (let i = 0; i < imgPoutines.length; i++) {
+      const imgPoutine = imgPoutines[i];
+      imgPoutine.classList.add('is-active');
+
+      imgPoutine.src = `assets/images/${this.selectedType}.png`;
+    }
   }
 }
