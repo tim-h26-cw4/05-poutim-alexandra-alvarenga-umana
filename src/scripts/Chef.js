@@ -37,10 +37,22 @@ export default class Chef {
     //     const nbrPoutine = this.menu[i];
     //     this.selectedType += nbrPoutine;
     //     console.log(nbrPoutine);
+
+    //     let nbrPoutine = 0;
+    // for (let i = 0; i < this.menu.length; i++) {
+    //   const typePoutine = this.menu[i];
+
+    //   if (typePoutine == this.selectedType) {
+    //     nbrPoutine.this.selectedType += 1;
+    //   }
     let nbrPoutine = 0;
     for (let i = 0; i < this.menu.length; i++) {
-      const poutine = this.menu[i];
-      nbrPoutine += poutine[i];
+      const typePoutine = this.menu[i];
+
+      if (typePoutine == this.selectedType) {
+        nbrPoutine++;
+      }
+      console.log(nbrPoutine);
 
       for (let i = 0; i < this.container.length; i++) {
         const container = this.container[i];
