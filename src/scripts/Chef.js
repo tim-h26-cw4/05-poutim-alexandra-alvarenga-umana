@@ -15,7 +15,6 @@ export default class Chef {
       const poutine = poutines[i];
       const instance = new Poutine(poutine);
       this.menu.push(instance);
-      // console.log(this.menu);
     }
 
     const btnCommandes = this.element.querySelectorAll('.js-btnCommande');
@@ -26,32 +25,17 @@ export default class Chef {
   }
 
   sendOrder() {
-    // const nbrPoutine = Math.floor(this.menu);
-    // console.log(nbrPoutine);
-    // this.menu += 1;
-    //  for (let i = 0; i < this.menu.length; i++) {
-    //   const nbrPoutine = this.menu[i];
-    //   this.menu[i] += 1;
-    //   console.log(nbrPoutine);
-    //  for (let i = 0; i < this.menu.length; i++) {
-    //     const nbrPoutine = this.menu[i];
-    //     this.selectedType += nbrPoutine;
-    //     console.log(nbrPoutine);
-
-    //     let nbrPoutine = 0;
-    // for (let i = 0; i < this.menu.length; i++) {
-    //   const typePoutine = this.menu[i];
-
-    //   if (typePoutine == this.selectedType) {
-    //     nbrPoutine.this.selectedType += 1;
-    //   }
+    //   if (typePoutine[i] == this.selectedType) {
+    //   nbrPoutine++;
+    // }
     let nbrPoutine = 0;
     for (let i = 0; i < this.menu.length; i++) {
       const typePoutine = this.menu[i];
 
-      if (typePoutine == this.selectedType) {
+      if (typePoutine[i] == this.types) {
         nbrPoutine++;
       }
+
       console.log(nbrPoutine);
 
       for (let i = 0; i < this.container.length; i++) {
