@@ -5,9 +5,7 @@ export default class Chef {
     this.element = element;
     this.menu = [];
     this.container = this.element.querySelectorAll('.js-container');
-    this.types = this.element.querySelectorAll('.js-btnPoutine');
-
-    this.isActive = false;
+    // this.isActive = false;
     // this.sendOrder();
     this.init();
   }
@@ -29,23 +27,20 @@ export default class Chef {
 
   sendOrder() {
     let nbrPoutine = 0;
-    let poutineActive = false;
-    for (let i = 0; i < this.types.length; i++) {
-      const type = this.types[i];
-      if (type[this.menu] == this.selectedType) {
-        poutineActive = true;
+    for (let i = 0; i < this.menu.length; i++) {
+      const typePoutine = this.menu[i];
+      if (typePoutine[i] == this.selectedType) {
         nbrPoutine++;
-        console.log(nbrPoutine);
       }
-      // console.log(nbrPoutine);
-      // for (let i = 0; i < this.container.length; i++) {
-      //   const container = this.container[i];
-      //   const p = document.createElement('p');
-      //   p.innerText = `Nombre total de poutine(s) : ${nbrPoutine}`;
-      //   container.innerHTML = '';
-      //   container.appendChild(p);
-      //   console.log(this.container);
-      // }
+      console.log(nbrPoutine);
+      for (let i = 0; i < this.container.length; i++) {
+        const container = this.container[i];
+        const p = document.createElement('p');
+        p.innerText = `Nombre total de poutine(s) : ${nbrPoutine}`;
+        container.innerHTML = '';
+        container.appendChild(p);
+        console.log(this.container);
+      }
     }
   }
 }
